@@ -1,0 +1,178 @@
+@media screen and (max-width:600px) {
+    *{
+        margin: 0;
+    }
+    body{
+        position: relative;
+    }
+    #container-All{
+        width: 100%;
+        height: 100vh;
+    }
+    #body-container{
+        width: 100%;
+        height: 80%;
+    }
+
+
+    /* menu item */
+    #mobile-menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        min-height: 100vh;
+
+        /* display: flex; */
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+    }
+    #mobile-menu-closer-container{
+        height: 7vh;
+    }
+    #mobile-menu-closer{
+        width: 10%;
+    }
+
+    #mobile-menu-item-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-menu-item{
+        padding: 5px 0;
+        font-size: 1.2em;
+        font-family: tahoma;
+        font-weight: bolder;
+        margin: 5px 0;
+    }
+
+
+    /* page header ///////////////////////////////////////////*/
+    #page-header{
+        padding:0 5%;
+        height: 10%;
+    }
+    #header-left{
+        width: 50%;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #navebar-text-container {
+        display: none;
+    }
+    #header-right{
+        width: 30%;
+    }
+    #header-right-left{
+        width: 80%;
+    }
+
+    /* card //////////////////////////////////////////////////////*/
+    #information-cart{
+        width: 95%;
+        height: 35vh;
+        right: 3%;
+        top: 12vh;
+    }
+    #cart-header{
+        font-size: 2em;
+    }
+    #cart-body-detail-countainer *{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    /* body ///////////////////////////////////////////////////////// */
+    #body-container {
+        padding-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #body-left-container{
+        width: 100%;
+        height: 40vh;
+        display: block;
+    }
+    .next-previous-on-large{
+        display: inline;
+    }
+    #body-left-top-img-container{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #previous-icon-onMobile{
+        left: 5%;
+    } 
+    #next-icon-onMobile{
+        right: 5%;
+    }
+    #body-left-l-img{
+        border-radius: 0;
+    }
+    #body-left-bottom-img-container{
+        display: none;
+    }
+
+    #body-right-container{
+        width: 100%;
+        padding: 3%;
+
+    }
+    #sneaker-company{
+        margin: 1%;
+    }
+    #body-title{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    #body-discription{
+        font-family: sans-serif;
+        line-height: 25px;
+        margin: 5% 0;
+    }
+    #price-offer-container{
+        margin: 8% 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3em;
+    }
+    #price-offer{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #price{
+        font-size: 1.5em;
+    }
+    #offer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        width: 25%;
+        height: 80%;
+    }
+
+    #body-right-bottom-container{
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2%;
+        width: 100%;
+        height: 15vh;
+    }
+    #body-right-bottom-product-counter{
+        width: 100%;
+        height: 45%;
+    }
+    #body-right-bottom-button{
+        width: 100%;
+        height: 45%;
+    }
+
+}

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcProductPage</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./largeScreenStyles.css">
+    <link rel="stylesheet" href="./smallScreenStyles.css">
 </head>
 
 <body>
@@ -41,22 +42,6 @@
                     <img id="header-avatar-img" src="./images/image-avatar.png" alt="avatar">
                 </div>
             </div>
-
-            <div id="information-cart">
-                <div id="cart-header">Cart</div>
-                <div id="cart-body">
-                    <span id="cart-body-empty-text">your cart is empty</span>
-                    <div id="cart-body-detail-countainer">
-                        <img id="cart-detail-product-image" src="./images/image-product-1-thumbnail.jpg" alt="">
-                        <span id="cart-detali-text">Fall Limited Edition Sneakers $125.00 <small>X</small> <span id="cart-detail-product-count">1</span> <span id="cart-detail-lastPrice">$125.00</span> </span>
-                        <img id="cart-detail-delete-icon" src="./images/icon-delete.svg" alt="">
-                    </div>
-                    <div id="cart-body-button-countainer">
-                        <button id="cart-button" type="button">Checkout</button>
-                    </div>
-                </div>
-            </div>
-
         </header>
 
         <main id="body-container">
@@ -64,34 +49,38 @@
             <div id="body-left-container">
 
                 <div id="body-left-top-img-container">
-                    <img id="body-left-product-img" src="./images/image-product-1.jpg" alt="">
+                    <img id="body-left-l-img" src="./images/image-product-1.jpg" alt="">                    
+                    <img id="previous-icon-onMobile" class="next-previous next-previous-on-large" src="./images/icon-previous.svg" alt="">
+                    <img id="next-icon-onMobile" class="next-previous next-previous-on-large" src="./images/icon-next.svg" alt="">    
                 </div>
 
                 <div id="body-left-bottom-img-container">
-                    <div class="bottom-product-img-container" id="p-1" active="true" number="0">
-                        <img id="body-left-bottom-product-1" class="bottom-product-img"
-                            src="./images/image-product-1-thumbnail.jpg" alt="">
-                        <div id="main-img-mosk-1" class="main-img-mosk" number="0" active="true"></div>
-                        <div id="main-img-soft-mosk-1" class="main-img-soft-mosk" number="0" active="true"></div>
-                    </div>
-                    <div class="bottom-product-img-container" id="p-2" active="false" number="1">
-                        <img id="body-left-bottom-product-2" class="bottom-product-img"
-                            src="./images/image-product-2-thumbnail.jpg" alt="">
-                        <div id="main-img-mosk-2" class="main-img-mosk" number="1" active="false"></div>
-                        <div id="main-img-soft-mosk-2" class="main-img-soft-mosk" number="1" active="false"></div>
-                    </div>
-                    <div class="bottom-product-img-container" id="p-3" active="false" number="2">
-                        <img id="body-left-bottom-product-3" class="bottom-product-img"
-                            src="./images/image-product-3-thumbnail.jpg" alt="">
-                        <div id="main-img-mosk-3" class="main-img-mosk" number="2" active="false"></div>
-                        <div id="main-img-soft-mosk-3" class="main-img-soft-mosk" number="2" active="false"></div>
-                    </div>
-                    <div class="bottom-product-img-container" id="p-4" active="false" number="3">
-                        <img id="body-left-bottom-product-4" class="bottom-product-img"
-                            src="./images/image-product-4-thumbnail.jpg" alt="">
-                        <div id="main-img-mosk-4" class="main-img-mosk" number="3" active="false"></div>
-                        <div id="main-img-soft-mosk-4" class="main-img-soft-mosk" number="3" active="false"></div>
-                    </div>
+
+                    <img 
+                        src="./images/image-product-1-thumbnail.jpg"
+                        alt="product"
+                        id="body-left-s-img-1"
+                        class="body-small-img img1 active"
+                    >
+                    <img 
+                        src="./images/image-product-2-thumbnail.jpg"
+                        alt="product"
+                        id="body-left-s-img-2"
+                        class="body-small-img img2"
+                    >
+                    <img 
+                        src="./images/image-product-3-thumbnail.jpg"
+                        alt="product"
+                        id="body-left-s-img-3"
+                        class="body-small-img img3"
+                    >
+                    <img 
+                        src="./images/image-product-4-thumbnail.jpg"
+                        alt="product"
+                        id="body-left-s-img-4"
+                        class="body-small-img img4"
+                    >
+
                 </div>
 
             </div>
@@ -104,11 +93,13 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, officia quas nostrum
                         necessitatibus deserunt libero, exercitationem laudantium asperiores sunt unde adipisci aliqu</p>
                 </div>
-                <div id="price-offer">
-                    <span id="price">$<span id="calcuteable-price">125.00</span></span>
-                    <span id="offer">50%</span>
+                <div id="price-offer-container">
+                    <div id="price-offer">
+                        <span id="price">$<span id="calcuteable-price">125.00</span></span>
+                        <span id="offer">50%</span>
+                    </div>
+                    <div id="last-price">$250.00</div>
                 </div>
-                <div id="last-price">$250.00</div>
 
                 <div id="body-right-bottom-container">
                     <div id="body-right-bottom-product-counter">
@@ -117,10 +108,11 @@
                         <img id="plus-icon" class="product-counter-items" src="./images/icon-plus.svg" alt="">
                     </div>
                     <div id="body-right-bottom-button">
-                        <img id="body-right-button-cart-icon" class="body-right-button-items"
+                        <img 
+                            id="body-right-button-cart-icon" 
+                            class="body-right-button-items"
                             src="./images/icon-cart.svg" alt="">
                         <span id="body-right-botton-text" class="body-right-button-items">Add to cart</span>
-                        <div id="body-right-bottom-button-mosk"></div>
                     </div>
                 </div>
 
@@ -129,6 +121,8 @@
         </main>
 
     </div>
+
+
     <!-- modal -->
     <div id="modal-container">
         <div id="modal">
@@ -144,32 +138,68 @@
             </div>
             
             <div id="modal-bottom-imgs-container">
-                <div class="modal-bottom-product-img-container" id="modal-p-1" active="true" number="0">
-                    <img id="modal-body-left-bottom-product-1" class="bottom-product-img"
-                        src="./images/image-product-1-thumbnail.jpg" alt="">
-                    <div id="modal-img-mosk-1" class="modal-img-mosk" number="0" active="true"></div>
-                    <div id="modal-img-soft-mosk-1" class="modal-img-soft-mosk" number="0" active="true"></div>
+
+                <div class="modal-img-container" id="modal-s-1">
+                    <img 
+                        src="./images/image-product-1-thumbnail.jpg" 
+                        alt=""
+                        class="modal-small-img img1 active"
+                    >
                 </div>
-                <div class="modal-bottom-product-img-container" id="modal-p-2" active="false" number="1">
-                    <img id="modal-body-left-bottom-product-2" class="bottom-product-img"
-                        src="./images/image-product-2-thumbnail.jpg" alt="">
-                    <div id="modal-img-mosk-2" class="modal-img-mosk" number="1" active="false"></div>
-                    <div id="modal-img-soft-mosk-2" class="modal-img-soft-mosk" number="1" active="false"></div>
+                <div class="modal-img-container" id="modal-s-2">
+                    <img 
+                        src="./images/image-product-2-thumbnail.jpg" 
+                        alt=""
+                        class="modal-small-img img2"
+                    >
                 </div>
-                <div class="modal-bottom-product-img-container" id="modal-p-3" active="false" number="2">
-                    <img id="modal-body-left-bottom-product-3" class="bottom-product-img"
-                        src="./images/image-product-3-thumbnail.jpg" alt="">
-                    <div id="modal-img-mosk-3" class="modal-img-mosk" number="2" active="false"></div>
-                    <div id="modal-img-soft-mosk-3" class="modal-img-soft-mosk" number="2" active="false"></div>
+                <div class="modal-img-container" id="modal-s-3">
+                    <img 
+                        src="./images/image-product-3-thumbnail.jpg" 
+                        alt=""
+                        class="modal-small-img img3"
+                    >
                 </div>
-                <div class="modal-bottom-product-img-container" id="modal-p-4" active="false" number="3">
-                    <img id="modal-body-left-bottom-product-4" class="bottom-product-img"
-                        src="./images/image-product-4-thumbnail.jpg" alt="">
-                    <div id="modal-img-mosk-4" class="modal-img-mosk" number="3" active="false"></div>
-                    <div id="modal-img-soft-mosk-4" class="modal-img-soft-mosk" number="3" active="false"></div>
+                <div class="modal-img-container" id="modal-s-4">
+                    <img 
+                        src="./images/image-product-4-thumbnail.jpg" 
+                        alt=""
+                        class="modal-small-img img4"
+                    >
                 </div>
+
             </div>
 
+        </div>
+    </div>
+
+    <!-- card -->
+    <div id="information-cart" style="display: none;">
+        <div id="cart-header">cart</div>
+        <div id="cart-body">
+            <span id="cart-body-empty-text">your cart is empty</span>
+            <div id="cart-body-detail-countainer">
+                <img id="cart-detail-product-image" src="./images/image-product-1-thumbnail.jpg" alt="">
+                <span id="cart-detali-text">Fall Limited Edition Sneakers $125.00 <small>X</small> <span id="cart-detail-product-count">1</span> <span id="cart-detail-lastPrice">$125.00</span> </span>
+                <img id="cart-detail-delete-icon" src="./images/icon-delete.svg" alt="">
+            </div>
+            <div id="cart-body-button-countainer">
+                <button id="cart-button" type="button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobile-menu">
+        <div id="mobile-menu-closer-container">
+            <img id="mobile-menu-closer" src="./images/icon-close.svg" alt="">
+        </div>
+        <div id="mobile-menu-item-container">
+            <span class="mobile-menu-item">Collections</span>
+            <span class="mobile-menu-item">Men</span>
+            <span class="mobile-menu-item">Women</span>
+            <span class="mobile-menu-item">About</span>
+            <span class="mobile-menu-item">Contact</span>
         </div>
     </div>
 
